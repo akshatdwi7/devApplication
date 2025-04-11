@@ -1,7 +1,19 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, View, StatusBar } from "react-native";
 import StartGameScreen from "./screens/StartGameScreen";
+import { LinearGradient } from "expo-linear-gradient";
 export default function App() {
-  return <StartGameScreen />;
+  return (
+    <LinearGradient colors={["#4e0329", "#ddb52f"]} style={styles.rootScreen}>
+      <StatusBar barStyle="light-content" backgroundColor="#4e0329" />
+      <StartGameScreen />
+    </LinearGradient>
+  );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  rootScreen: {
+    flex: 1,
+    paddingTop: 100,
+    paddingHorizontal: 16,
+  },
+});
