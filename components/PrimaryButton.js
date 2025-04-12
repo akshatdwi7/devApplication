@@ -1,7 +1,9 @@
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import React from "react";
 
-function PrimaryButton({ children }) {
+function PrimaryButton({ children, onPress }) {
+  // onPress is passed from StartGameScreen.js
+  // to handle the button press event
   const pressHandler = () => {
     console.log("Pressed");
   };
@@ -13,7 +15,7 @@ function PrimaryButton({ children }) {
             ? [styles.buttonInnerContainer, styles.pressed]
             : styles.buttonInnerContainer
         }
-        onPress={pressHandler}
+        onPress={onPress} // to handle the button press event
         android_ripple={{ color: "#640233" }} // for android ripple effect
       >
         <Text style={styles.buttonText}>{children}</Text>
