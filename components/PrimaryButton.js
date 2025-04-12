@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import React from "react";
+import color from "../constants/color";
 
 function PrimaryButton({ children, onPress }) {
   // onPress is passed from StartGameScreen.js
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
     overflow: "hidden", // to make sure the inner container is not visible outside the outer container
   },
   buttonInnerContainer: {
-    backgroundColor: "#72063c",
+    backgroundColor: color.primary,
     paddingVertical: 8,
     paddingHorizontal: 16,
 

@@ -1,4 +1,10 @@
-import { StyleSheet, View, StatusBar, ImageBackground } from "react-native";
+import {
+  StyleSheet,
+  View,
+  StatusBar,
+  ImageBackground,
+  SafeAreaView,
+} from "react-native";
 import React, { useState } from "react";
 import StartGameScreen from "./screens/StartGameScreen";
 import { LinearGradient } from "expo-linear-gradient";
@@ -24,7 +30,7 @@ export default function App() {
         // to make the image transparent
       >
         <StatusBar barStyle="light-content" backgroundColor="#4e0329" />
-        {screen}
+        <SafeAreaView style={styles.rootScreen}>{screen}</SafeAreaView>
       </ImageBackground>
     </LinearGradient>
   );
