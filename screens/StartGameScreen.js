@@ -3,6 +3,8 @@ import React from "react";
 import { useState } from "react";
 import PrimaryButton from "../components/PrimaryButton";
 import Title from "../components/Title";
+import Cards from "../components/card";
+import GameInst from "../components/GameInst";
 
 function StartGameScreen({ onPickNumber }) {
   const [enteredValue, setEnteredValue] = useState("");
@@ -29,8 +31,8 @@ function StartGameScreen({ onPickNumber }) {
   return (
     <View style={styles.RootContainer}>
       <Title>Guess My Number</Title>
-      <View style={styles.inputContainer}>
-        <Text style={styles.text}> Enter a Number honey :) 😚 </Text>
+      <Cards>
+        <GameInst>Enter a Number Cuite:)</GameInst>
         <TextInput
           style={styles.textinput}
           maxLength={2} // to limit the input to 2 characters
@@ -52,7 +54,7 @@ function StartGameScreen({ onPickNumber }) {
             </PrimaryButton>
           </View>
         </View>
-      </View>
+      </Cards>
     </View>
   );
 }
@@ -65,32 +67,7 @@ const styles = StyleSheet.create({
     marginTop: 100,
     alignItems: "center",
   },
-  text: {
-    fontSize: 24,
 
-    color: "#ddb52f",
-    textAlign: "center",
-    marginBottom: 16,
-    padding: 12,
-    borderColor: "#ddb52f",
-
-    backgroundColor: "#4e0329",
-    borderRadius: 18,
-  },
-  inputContainer: {
-    marginTop: 36,
-    marginHorizontal: 5,
-    justifyContent: "center",
-    alignItems: "center",
-    padding: 16,
-    borderRadius: 8,
-    backgroundColor: "#4e0329",
-    elevation: 4, // for Android it has no effect on iOS
-    shadowColor: "black", // for iO
-    shadowOffset: { width: 0, height: 2 }, // for iOS
-    shadowRadius: 6, // for iOS
-    shadowOpacity: 0.25, // for iOS
-  },
   textinput: {
     height: 50,
 
