@@ -1,3 +1,4 @@
 Building the components. 
 Add dev elements 
 cleaned the tree
+Progress chart 
